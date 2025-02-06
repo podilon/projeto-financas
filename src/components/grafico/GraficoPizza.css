@@ -1,0 +1,10 @@
+#chartContainer{
+    background:#f5f5f5;
+    border-radius: 15px;
+}
+
+#chartSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
