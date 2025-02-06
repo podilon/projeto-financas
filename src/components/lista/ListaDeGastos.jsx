@@ -1,19 +1,27 @@
 import 'react';
+import './ListaDeGastos.css'
 
 function ListaDeGastos({ gastos }) {
     
    
 
   return (
-    <div>
+    <div id="listaSection">
       <h2>Lista de Gastos</h2>
-      <ul>
+      <table>
+        <thead>
+          <th>Data</th>
+          <th>Descrição</th>
+        </thead>
+        <tbody>
         {gastos.map((gasto, index) => (
-          <li key={index}>
-            <strong>{gasto.nome}</strong> - R$ {gasto.valor} - {gasto.categoria} - {gasto.dia}
-          </li>
+          <>
+            <td><strong>{gasto.data}</strong></td> 
+            <td>Gasto com {gasto.nome}({gasto.categoria}) com valor de  R${gasto.valor}</td>
+          </>
         ))}
-      </ul>
+        </tbody>
+      </table>
     </div>
   );
 }
