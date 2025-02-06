@@ -10,15 +10,17 @@ function ListaDeGastos({ gastos }) {
       <h2>Lista de Gastos</h2>
       <table>
         <thead>
-          <th>Data</th>
-          <th>Descrição</th>
+          <tr>
+            <th>Data</th>
+            <th>Descrição</th>
+          </tr>
         </thead>
         <tbody>
         {gastos.map((gasto, index) => (
-          <>
-            <td><strong>{gasto.data}</strong></td> 
+          <tr key={index}>
+            <td><strong>{gasto.data.split('-').reverse().join("/")}</strong></td> 
             <td>Gasto com {gasto.nome}({gasto.categoria}) com valor de  R${gasto.valor}</td>
-          </>
+          </tr>
         ))}
         </tbody>
       </table>
