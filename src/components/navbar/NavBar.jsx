@@ -6,8 +6,8 @@ import './NavBar.css'
 
 function NavBar() {
   return (
-    <nav>
-      <ul className='button'>
+    <nav id="navBar">
+      <ul>
         <li>
           <Link to="/cadastro" >Cadastrar Gastos</Link>
         </li>

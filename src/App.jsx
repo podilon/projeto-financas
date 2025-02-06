@@ -4,15 +4,16 @@ import Cadastro from './components/cadastro/Cadastro';
 import Grafico from './components/grafico/Grafico';
 import ListaDeGastos from './components/lista/ListaDeGastos';
 import NavBar from './components/navbar/NavBar';
+import './App.css'
 
 function App() {
   const [gastos, setGastos] = useState([]);
 
   return (
+    <>
     <Router>
       <div className="App">
         {/* Exibindo a NavBar */}
-        <NavBar />
         <h1>Controle Financeiro</h1>
         
         {/* Rotas */}
@@ -21,8 +22,10 @@ function App() {
           <Route path="/listar" element={<ListaDeGastos gastos={gastos} />} />
           <Route path="/grafico" element={<Grafico gastos={gastos} />} />
         </Routes>
+        <NavBar />
       </div>
     </Router>
+    </>
   );
 }
 

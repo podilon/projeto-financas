@@ -4,10 +4,10 @@ import './Cadastro.css';
 
 function Cadastro({ setGastos }) {
   return (
-    <div>
+    <section id="formSection">
       <h2>Cadastro de Gastos</h2>
       <FormularioCadastro setGastos={setGastos} />
-    </div>
+    </section>
   );
 }
 
